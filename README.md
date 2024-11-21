@@ -61,6 +61,6 @@ La tabla muestra los tiempos críticos y detalles de los caminos más importante
 
 ![image](https://github.com/user-attachments/assets/2423ea42-6dfe-44bf-869a-398d777b8237)
 
-El proyecto tiene dimensiones físicas claramente definidas, con un ancho de **122.020 µm** y un alto de **132.740 µm**, lo que resulta en una buena integración si se va a realizar en 130 nm.
+El proyecto tiene dimensiones físicas claramente definidas, con un ancho de **122.020 µm** y un alto de **132.740 µm**, lo que resulta en una buena integración si se va a realizar en 130 nm. Algo en lo que se debe mejorar es la disposicion de los pines ya que la forma en la que está dispuesto no es la mas optima para el diseño final.
 
 ![image](https://github.com/user-attachments/assets/7bc73f60-f16d-4386-80d7-d508c0d7fe4d)
