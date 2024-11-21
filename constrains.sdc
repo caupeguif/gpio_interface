@@ -1,0 +1,17 @@
+# Definición del reloj principal (110 MHz)
+create_clock -period 10 -name clk -waveform {0.0 4.545} [get_ports clk]
+#inputs y outputs delay
+set_input_delay -clock [get_clocks clk] 1.5 [get_ports gpio_pins[*]]
+set_input_delay -clock [get_clocks clk] 1.5 [get_ports data_in[*]]
+set_input_delay -clock [get_clocks clk] 1.5 [get_ports dir_in[*]]
+set_input_delay -clock [get_clocks clk] 1.5 [get_ports pinchange_msk[*]]
+set_input_delay -clock [get_clocks clk] 1.5 [get_ports interrupt_mask[*]]
+set_input_delay -clock [get_clocks clk] 1.5 [get_ports reset]
+set_input_delay -clock [get_clocks clk] 1.5 [get_ports write_data_enable]
+set_input_delay -clock [get_clocks clk] 1.5 [get_ports write_dir_enable]
+set_output_delay -clock [get_clocks clk] 2.4 [get_ports gpio_pins_out[*]]
+set_output_delay -clock [get_clocks clk] 2.4 [get_ports gpio_data_in[*]]
+set_output_delay -clock [get_clocks clk] 2.4 [get_ports gpio_data_out[*]]
+set_output_delay -clock [get_clocks clk] 2.4 [get_ports irq_int0]
+set_output_delay -clock [get_clocks clk] 2.4 [get_ports irq_int1]
+set_output_delay -clock [get_clocks clk] 2.4 [get_ports irq_pinchange]
