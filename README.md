@@ -60,6 +60,9 @@ El análisis de temporización del diseño muestra que todas las restricciones e
 La tabla muestra los tiempos críticos y detalles de los caminos más importantes en el diseño, incluyendo el retardo total, retardo lógico, y retardo de la red para rutas entre señales específicas del diseño, como `gpio_pins_inst` y `gpio_pins_out`. Basándose en estos valores, se definieron las restricciones (`constraints`) de temporización para el diseño. Por ejemplo, se estableció un reloj principal de 100 MHz con un período de 10 ns, lo que define la base de la temporización. Para los puertos de entrada, como `gpio_pins`, `data_in`, y otros, se asignó un retardo de entrada de 1.5 ns (`set_input_delay`) para reflejar el tiempo que las señales externas tardan en estabilizarse después de un flanco del reloj. Similarmente, para los puertos de salida, como `gpio_pins_out` y `gpio_data_in`, se aplicó un retardo de salida de 2.4 ns (`set_output_delay`) para indicar el tiempo máximo permitido para que las señales lleguen a sus destinos externos. Estos valores aseguran que las señales cumplan con los márgenes de tiempo establecidos en el diseño para un funcionamiento correcto.
 
 ![image](https://github.com/user-attachments/assets/2423ea42-6dfe-44bf-869a-398d777b8237)
+Se realizó una synthesis para encontrar la configuración adecuada que menor tamaño ocupe y que los tiempos de slack sean mejores.
+
+![image](https://github.com/user-attachments/assets/6037741a-b4b7-4988-b3fe-8adb77ddb490)
 
 El proyecto tiene dimensiones físicas claramente definidas, con un ancho de **122.020 µm** y un alto de **132.740 µm**, lo que resulta en una buena integración si se va a realizar en 130 nm. Algo en lo que se debe mejorar es la disposicion de los pines ya que la forma en la que está dispuesto no es la mas optima para el diseño final.
 
